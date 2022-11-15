@@ -1,0 +1,48 @@
+.wp-block-group__inner-container {
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+}
+
+.container {
+	width: 90%;
+	max-width: 1600px;
+	margin: auto;
+}
+
+.wp-admin {
+	figure {
+		margin: 0;
+	}
+}
+
+.section_inner {
+	width: 90%;
+	max-width: 1600px;
+	margin-left: auto!important;
+	margin-right: auto!important;
+	justify-content: space-between;
+}
+
+// Hello Dolly
+
+#facts {
+	float: right;
+	padding: 5px 10px;
+	margin: 0;
+	font-size: 12px;
+	line-height: 1.6666;
+}
+.rtl #facts {
+	float: left;
+}
+.block-editor-page #facts {
+	display: none;
+}
+@media screen and (max-width: 782px) {
+	#facts,
+	.rtl #facts {
+		float: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

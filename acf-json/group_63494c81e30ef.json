@@ -1,0 +1,79 @@
+{
+    "key": "group_63494c81e30ef",
+    "title": "Component: Spacing",
+    "fields": [
+        {
+            "key": "field_63494c82c44a1",
+            "label": "Padding",
+            "name": "padding",
+            "type": "select",
+            "instructions": "Padding settings are applied only to Top and Bottom values",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "padding-sm": "Small",
+                "padding-md": "Medium",
+                "padding-lg": "Large",
+                "padding-xl": "Huge"
+            },
+            "default_value": "padding-sm",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63494d96c44a2",
+            "label": "Margin Bottom",
+            "name": "margin",
+            "type": "select",
+            "instructions": "Margin settings are applied only to Bottom value",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "margin-sm": "Small",
+                "margin-md": "Medium",
+                "margin-lg": "Large",
+                "margin-xl": "Huge"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1666017401
+}

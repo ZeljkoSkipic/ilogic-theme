@@ -1,0 +1,16 @@
+{
+    "name": "acf/team",
+    "title": "iLogic Team",
+    "description": "A Team Block",
+    "category": "formatting",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["team", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "team.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}
