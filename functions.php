@@ -107,34 +107,34 @@ add_action( 'widgets_init', 'ilogic_widgets_init' );
  */
 function ilogic_scripts() {
 	wp_enqueue_style( 'ilogic-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'ilogic-style', 'rtl', 'replace' );
-	wp_enqueue_script( 'ilogic-script', get_template_directory_uri() . '/custom.js', array('jquery'), _S_VERSION );
-	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/vendor/fancybox.js',array('jquery'),_S_VERSION,true);
+	wp_enqueue_style( 'frontend-style', get_template_directory_uri() . '/assets/public/css/frontend.css', array(), _S_VERSION );
+	wp_enqueue_script( 'ilogic-script', get_template_directory_uri() . '/assets/public/js/frontend.js', array('jquery'), _S_VERSION );
+	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/assets/public/js/vendor/fancybox.js',array('jquery'),_S_VERSION,true);
 }
 add_action( 'wp_enqueue_scripts', 'ilogic_scripts' );
 
 function ilogic_admin_styles() {
-	wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'backend-styles', get_template_directory_uri() . '/assets/public/css/backend.css' );
 }
 add_action( 'admin_enqueue_scripts', 'ilogic_admin_styles' );
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/theme-tags.php';
+require get_template_directory() . '/includes/theme-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/theme-functions.php';
+require get_template_directory() . '/includes/theme-functions.php';
 
 // Theme options
 
-require get_template_directory() . '/inc/theme-options.php';
+require get_template_directory() . '/includes/theme-options.php';
 
 // Fun Facts
 
-require get_template_directory() . '/inc/theme-facts.php';
+require get_template_directory() . '/includes/theme-facts.php';
 
 
 // Register Blocks
@@ -146,5 +146,5 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/accordion' );
 	register_block_type( __DIR__ . '/blocks/gallery' );
 	register_block_type( __DIR__ . '/blocks/team' );
-
+	register_block_type( __DIR__ . '/blocks/columns' );
 }

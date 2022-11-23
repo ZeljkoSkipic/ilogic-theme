@@ -23,7 +23,7 @@ if ( ! empty( $padding) ) {
     $class .=  ' ' . $padding['value'];
 }
 
-$sec_in_class = 'section_inner';
+$sec_in_class = 'section_inner container';
 if ( ! empty( $layout ) ) {
     $sec_in_class .=  ' ' . $layout['value'];
 }

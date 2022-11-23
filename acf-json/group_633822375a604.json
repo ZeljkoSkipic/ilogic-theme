@@ -131,7 +131,7 @@
             "min_width": "",
             "min_height": "",
             "min_size": "",
-            "max_width": "",
+            "max_width": 100,
             "max_height": "",
             "max_size": "",
             "mime_types": "",
@@ -316,5 +316,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668420442
+    "modified": 1669025207
 }

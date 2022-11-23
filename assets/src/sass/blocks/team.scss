@@ -1,0 +1,25 @@
+.team_inner {
+  display: flex;
+  flex-wrap: wrap;
+  .member {
+    display: flex;
+    &-1 {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      figure {
+        max-width: 300px;
+        border-radius: 300px;
+        img, picture {
+          border-radius: 300px;
+        }
+      }
+    }
+    &-2 {
+      figure {
+        flex: 35% 0 0;
+        margin-right: 2rem;
+      }
+    }
+  }
+}

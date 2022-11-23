@@ -1,0 +1,87 @@
+:root {
+  --color-1: #2B2C6C;
+  --color-2: #E6317D;
+  --color-3: #2FB297;
+  --color-text: #71717D;
+
+  --title-size-1: 6rem;
+  --title-size-2: 5rem;
+  --title-size-3: 4rem;
+  --title-size-4: 3rem;
+  --title-size-5: 2.5rem;
+  --title-size-6: 2rem;
+
+  --theme-transition: .3s all;
+
+  --site-width: 90%;
+  --site-max-width: 1600px;
+}
+
+$mob-max: 479.5px;
+$tab-min: 479.6px;
+$tab-max: 797.5px;
+$limbo-min: 797.6px;
+$limbo-max: 1199.5px;
+$desk-min: 1199.6px;
+$sm-desk-max: 1360.5px;
+$lg-desk-min: 1360.6px;
+
+@mixin mob-only {
+  @media (max-width: $mob-max) {
+    @content;
+  }
+}
+
+@mixin tab-min {
+  @media (min-width: $tab-min) {
+    @content;
+  }
+}
+
+@mixin tab-max {
+  @media (max-width: $tab-max) {
+    @content;
+  }
+}
+
+@mixin tab-only {
+  @media (min-width: $tab-min) and (max-width: $tab-max) {
+    @content;
+  }
+}
+
+@mixin limbo-min {
+  @media (min-width: $limbo-min) {
+    @content;
+  }
+}
+
+@mixin limbo-max {
+  @media (max-width: $limbo-max) {
+    @content;
+  }
+}
+
+@mixin limbo-only {
+  @media (min-width: $limbo-min) and (max-width: $limbo-max) {
+    @content;
+  }
+}
+
+@mixin desk-min {
+  @media (min-width: $desk-min) {
+    @content;
+  }
+}
+
+@mixin sm-desk-only {
+  @media (min-width: $desk-min) and (max-width: $sm-desk-max) {
+    @content;
+  }
+}
+
+@mixin lg-desk-min {
+  @media (min-width: $lg-desk-min) {
+    @content;
+  }
+}
