@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
 	$( ".menu-toggle" ).click(function() {
-		$( ".main-navigation" ).slideToggle();
+		$( "#primary-menu" ).slideToggle();
 		$( this ).toggleClass('menu-open')
 	});
 

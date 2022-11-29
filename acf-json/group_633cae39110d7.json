@@ -96,7 +96,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "20",
                 "class": "",
                 "id": ""
             },
@@ -142,5 +142,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669196954
+    "modified": 1669629554
 }

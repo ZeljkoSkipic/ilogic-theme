@@ -15,3 +15,4 @@ webpack/config.production.js
 webpack/postcss.config.js
 package.json
 package-lock.json
+theme-styles/

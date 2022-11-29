@@ -3,22 +3,6 @@
     "title": "Settings: Header",
     "fields": [
         {
-            "key": "field_634556f40a55b",
-            "label": "Top Bar",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
             "key": "field_63454913dd84c",
             "label": "Sticky Header",
             "name": "sticky",
@@ -43,23 +27,20 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_63721bce0b9a2",
-            "label": "Notice Text",
-            "name": "notice_text",
-            "type": "text",
+            "key": "field_634556f40a55b",
+            "label": "Top Bar",
+            "name": "",
+            "type": "tab",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_6372213404867",
@@ -175,5 +156,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668426206
+    "modified": 1669633296
 }

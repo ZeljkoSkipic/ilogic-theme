@@ -1,20 +1,5 @@
-html {
-  font-size: 10px;
-  :where(.wp-block) {
-    max-width: 90%;
-  }
+// File location: assets\src\sass\styles\template-style
 
-  h1, h2, h3,h4, h5, h6 {
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
-}
-
-.container {
-  width: var(--site-width);
-  max-width: var(--site-max-width);
-  margin: auto;
-}
 
 div {
   &.full-screen {
@@ -29,7 +14,7 @@ div {
   }
   &.padding-md {
     padding-top: 7rem;
-    padding-bottom: 7em;
+    padding-bottom: 7rem;
   }
   &.padding-lg {
     padding-top: 10rem;
@@ -52,135 +37,15 @@ div {
     margin-bottom: 10rem;
   }
 }
-.cols-2 {
-  .column {
-    width: 49%;
-    margin-bottom: 2%;
-    &:nth-child(2n + 1) {
-      margin-right: 2%;
-    }
-  }
-}
-.cols-3 {
-  .column {
-    width: 32%;
-    margin-bottom: 2%;
-    &:not(:nth-child(3n + 3)) {
-      margin-right: 2%;
-    }
-  }
-}
-.cols-4 {
-  .column {
-    width: 24%;
-    margin-bottom: 1.33%;
-    &:not(:nth-child(4n + 4)) {
-      margin-right: 1.33%;
-    }
-  }
-}
-.cols-5 {
-  .column {
-    width: 19%;
-    margin-bottom: 1.25%;
-    &:not(:nth-child(5n + 5)) {
-      margin-right: 1.25%;
-    }
-  }
-}
-figure img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-@include tab-max {
-  .tab-cols-1 {
-    .column {
-      width: 100%;
-      margin-bottom: 4%;
-      &:nth-child(1n + 1) {
-        margin-right: 0;
-      }
-    }
-  }
-  .tab-cols-2 {
-    .column {
-      width: 48%;
-      margin-bottom: 4%;
-      &:not(:nth-child(2n + 2)) {
-        margin-right: 4%;
-      }
-      &:nth-child(2n + 2) {
-        margin-right: 0;
-      }
-    }
-  }
-  .tab-cols-3 {
-    .column {
-      width: 32%;
-      margin-bottom: 2%;
-      &:nth-child(3n + 3) {
-        margin-right: 0;
-      }
-      &:not(:nth-child(3n + 3)) {
-        margin-right: 2%;
-      }
-    }
-  }
-  .tab-cols-4 {
-    .column {
-      width: 24%;
-      margin-bottom: 1.33%;
-      &:nth-child(4n + 4) {
-        margin-right: 1.33%;
-      }
-      &:not(:nth-child(4n + 4)) {
-        margin-right: 1.33%;
-      }
-    }
-  }
-}
-@include mob-only {
-  .mob-cols-1 {
-    .column {
-      width: 100%;
-      margin-bottom: 4%;
-      margin-right: 0!important;
-    }
-  }
-  .mob-cols-2 {
-    .column {
-      width: 48%;
-      margin-bottom: 4%;
-      &:not(:nth-child(2n + 2)) {
-        margin-right: 4%;
-      }
-      &:nth-child(2n + 2) {
-        margin-right: 0;
-      }
-    }
-  }
-  .mob-cols-3 {
-    .column {
-      width: 32%;
-      margin-bottom: 2%;
-      &:nth-child(3n + 3) {
-        margin-right: 0;
-      }
-      &:not(:nth-child(3n + 3)) {
-        margin-right: 2%;
-      }
-    }
-  }
-}
 
 /* Buttons */
 
 .il_btn {
-  padding: 1rem 2rem;
+  padding: .5rem 4rem;
   text-decoration: none;
   color: #fff;
   display: inline-flex;
+  font-size: 2rem;
   &:first-child {
     background-color: var(--color-1);
   }
@@ -192,31 +57,5 @@ figure img {
   }
   &:not(:last-child), &:not(:only-child) {
     margin-right: 1rem;
-  }
-}
-
-
-
-// Facts
-
-#facts {
-  float: right;
-  padding: 5px 10px;
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.6666;
-}
-.rtl #facts {
-  float: left;
-}
-.block-editor-page #facts {
-  display: none;
-}
-@media screen and (max-width: 782px) {
-  #facts,
-  .rtl #facts {
-    float: none;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
