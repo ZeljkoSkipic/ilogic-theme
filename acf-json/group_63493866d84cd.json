@@ -21,8 +21,8 @@
         {
             "key": "field_6349386722863",
             "label": "Title",
-            "name": "title",
-            "type": "text",
+            "name": "hero_title",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,11 +31,13 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "clone": [
+                "group_633cae39110d7"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_63493b9722867",
@@ -232,5 +234,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1665770759
+    "modified": 1669890357
 }

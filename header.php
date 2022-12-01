@@ -25,13 +25,13 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site header-version-1">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ilogic' ); ?></a>
-	<div class="header-top <?php the_field('buttons_position', 'option') ?>">
-		<div class="section_inner">
 		<?php
 			// Check rows existexists.
-			if( have_rows('top_buttons', 'option') ):
+			if( have_rows('top_buttons', 'option') ): ?>
+			<div class="header-top <?php the_field('buttons_position', 'option') ?>">
+				<div class="section_inner">
 
-				while( have_rows('top_buttons', 'option') ) : the_row();
+				<?php while( have_rows('top_buttons', 'option') ) : the_row();
 
 					$top_button = get_sub_field('top_button');
 					$tb_url = $top_button['url'];
@@ -40,11 +40,11 @@
 
 					<a class="il_btn" href="<?php echo esc_url( $tb_url ); ?>" target="<?php echo esc_attr( $tb_target ); ?>"><?php echo esc_html( $tb_title ); ?></a>
 
-				<?php endwhile;
-			endif;
-		?>
-		</div>
-	</div>
+				<?php endwhile; ?>
+				</div>
+			</div>
+			<?php endif; ?>
+
 	<header id="masthead" class="header-main">
 		<div class="container header-main-inner">
 			<div class="logo-wrap">

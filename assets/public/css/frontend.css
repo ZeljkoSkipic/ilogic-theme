@@ -168,38 +168,33 @@ html h6 {
           margin-block-end: 0;
 }
 
-h2 {
-  font-size: var(--title-size-2);
-}
-
-h3 {
-  font-size: var(--title-size-3);
-}
-
-h4 {
-  font-size: var(--title-size-4);
-}
-
-h5 {
-  font-size: var(--title-size-5);
-}
-
-h6 {
-  font-size: var(--title-size-6);
-}
-
-p {
+.site-main p, .interface-interface-skeleton__content p {
   font-size: 2rem;
 }
 @media (max-width: 1199.5px) {
-  p {
+  .site-main p, .interface-interface-skeleton__content p {
     font-size: 16px;
   }
 }
 @media (max-width: 479.5px) {
-  p {
+  .site-main p, .interface-interface-skeleton__content p {
     font-size: 15px;
   }
+}
+.site-main h2, .interface-interface-skeleton__content h2 {
+  font-size: var(--title-size-2);
+}
+.site-main h3, .interface-interface-skeleton__content h3 {
+  font-size: var(--title-size-3);
+}
+.site-main h4, .interface-interface-skeleton__content h4 {
+  font-size: var(--title-size-4);
+}
+.site-main h5, .interface-interface-skeleton__content h5 {
+  font-size: var(--title-size-5);
+}
+.site-main h6, .interface-interface-skeleton__content h6 {
+  font-size: var(--title-size-6);
 }
 
 .container {

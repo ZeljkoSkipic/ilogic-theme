@@ -57,7 +57,7 @@
         },
         {
             "key": "field_634be74cb3a7c",
-            "label": "Gallery",
+            "label": "Images",
             "name": "images",
             "type": "repeater",
             "instructions": "",
@@ -237,5 +237,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666176764
+    "modified": 1669889109
 }

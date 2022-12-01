@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_63447fe3871ab",
-            "label": "Tag",
+            "label": "Title Tag",
             "name": "heading_tag",
             "type": "select",
             "instructions": "",
@@ -142,5 +142,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669629554
+    "modified": 1669891167
 }

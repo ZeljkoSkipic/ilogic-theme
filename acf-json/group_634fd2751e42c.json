@@ -201,6 +201,23 @@
             "prefix_name": 0
         },
         {
+            "key": "field_638891f92af46",
+            "label": "Columns",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_634fd7db9660b",
             "label": "Columns",
             "name": "team_columns",
@@ -285,5 +302,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668420488
+    "modified": 1669894667
 }

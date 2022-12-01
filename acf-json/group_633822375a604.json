@@ -77,7 +77,7 @@
                     "key": "field_633822a95716a",
                     "label": "Buttons",
                     "name": "buttons",
-                    "type": "repeater",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -86,30 +86,13 @@
                         "class": "",
                         "id": ""
                     },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "Add Button",
-                    "rows_per_page": 20,
-                    "sub_fields": [
-                        {
-                            "key": "field_633822c85716b",
-                            "label": "Button",
-                            "name": "button",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "parent_repeater": "field_633822a95716a"
-                        }
-                    ]
+                    "clone": [
+                        "group_63499d76f1b93"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
                 }
             ]
         },
@@ -316,5 +299,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669025207
+    "modified": 1669892082
 }

@@ -29,7 +29,17 @@ html {
       margin-block-end: 0;
     }
   }
-  h2 {
+  .site-main, .interface-interface-skeleton__content {
+    p {
+      font-size: 2rem;
+      @include limbo-max {
+        font-size: 16px;
+      }
+      @include mob-only {
+        font-size: 15px;
+      }
+   }
+   h2 {
     font-size: var(--title-size-2);
   }
   h3 {
@@ -44,15 +54,7 @@ html {
   h6 {
     font-size: var(--title-size-6);
   }
-  p {
-    font-size: 2rem;
-    @include limbo-max {
-      font-size: 16px;
-    }
-    @include mob-only {
-      font-size: 15px;
-    }
-  }
+}
   .container {
     width: var(--site-width);
     max-width: var(--site-max-width);

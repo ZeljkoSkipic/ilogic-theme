@@ -1,7 +1,6 @@
 <?php
 $bg_color = get_field('background_color');
 $bg_img = get_field('background_image');
-$title = get_field('title');
 $subtitle = get_field('subtitle');
 $content = get_field('content');
 $height = get_field_object('height');
@@ -27,7 +26,7 @@ if ( ! empty( $padding) ) {
 
 <div class="<?php echo $class; ?>" style="background-image: url('<?php echo $bg_img; ?>'); background-color: <?php echo $bg_color; ?>">
 	<div class="container hero_inner">
-	<h1><?php echo $title ?></h1>
+	<?php get_template_part('components/title'); ?>
 	<h2><?php echo $subtitle ?></h2>
 	<div><?php echo $content ?></div>
 	<?php get_template_part('components/buttons'); ?>
