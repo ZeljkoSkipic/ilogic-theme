@@ -27,7 +27,7 @@ if ( ! empty( $padding) ) {
 <div class="<?php echo $class; ?>" style="background-image: url('<?php echo $bg_img; ?>'); background-color: <?php echo $bg_color; ?>">
 	<div class="container hero_inner">
 	<?php get_template_part('components/title'); ?>
-	<h2><?php echo $subtitle ?></h2>
+	<h2 class="hero_subtitle"><?php echo $subtitle ?></h2>
 	<div><?php echo $content ?></div>
 	<?php get_template_part('components/buttons'); ?>
 	</div>

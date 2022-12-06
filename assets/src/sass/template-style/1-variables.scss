@@ -13,6 +13,8 @@
   --title-size-5: 2.5rem;
   --title-size-6: 2rem;
 
+  --title-line-height: 1.2;
+
   --theme-transition: .3s all;
 
   @media (min-width: 797.6px) /* Insert the same width as limbo-min variable */ {
@@ -24,6 +26,17 @@
   }
   --site-max-width: 1600px;
 }
+
+@mixin ab-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 $mob-max: 479.5px;
 $tab-min: 479.6px;

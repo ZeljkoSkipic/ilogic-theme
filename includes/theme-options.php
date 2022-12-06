@@ -28,5 +28,9 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'External Scripts',
 		'parent_slug'	=> 'theme-general-settings',
 	));
-
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Miscellaneous Options',
+		'menu_title'	=> 'Misc',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 }

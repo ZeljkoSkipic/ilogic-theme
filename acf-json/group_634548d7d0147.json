@@ -47,7 +47,7 @@
             "label": "Buttons",
             "name": "top_buttons",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "If no buttons are inserted, the Top Bar will not be shown.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -156,5 +156,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669887361
+    "modified": 1670237681
 }

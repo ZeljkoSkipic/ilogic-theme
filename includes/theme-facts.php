@@ -5,7 +5,8 @@ function ilogic_facts() {
 	$facts = "Developer of this awesome theme is <a href='https://zeljkoskipic.dev/'>Zeljko Skipic</a>
 WordPress was downloaded more than <strong>100 Milion Times</strong>
 Google-hosted Fonts violates the GDPR <a href='https://make.wordpress.org/themes/2022/06/18/complying-with-gdpr-when-using-google-fonts/'>Read More</a>
-Develop future-proof websites and shorten the QA time with <a href='https://defensivecss.dev/tips'>Defensive CSS</a>";
+Develop future-proof websites and shorten the QA time with <a href='https://defensivecss.dev/tips'>Defensive CSS</a>
+WordPress is used by 43.2% of all websites on the internet";
 
 	// Here we split it into lines.
 	$facts = explode( "\n", $facts );

@@ -147,4 +147,5 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/gallery' );
 	register_block_type( __DIR__ . '/blocks/team' );
 	register_block_type( __DIR__ . '/blocks/columns' );
+	register_block_type( __DIR__ . '/blocks/tabs' );
 }

@@ -1,0 +1,34 @@
+.il_inner_hero {
+    min-height: 40rem;
+    position: relative;
+    display: flex;
+    .il_inner_hero_bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .il_inner_hero_inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 5rem 0;
+        .il_inner_hero_title {
+            color: #fff;
+            font-size: var(--title-size-1);
+        }
+        .il_inner_hero_text {
+            color: #fff;
+        }
+    }
+}
