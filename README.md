@@ -6,3 +6,5 @@
 ![PurgeCSS 3.1.3](https://img.shields.io/badge/PurgeCSS-3.1.3-brightgreen)
 
 [Theme Documentation >>](https://theme.ilogic-dev.net/knowledge-base/)
+
+If you are using the Theme as is, run 'yarn prod' first to compile the files for the production.
