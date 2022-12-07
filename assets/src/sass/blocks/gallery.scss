@@ -1,4 +1,4 @@
-.gallery {
+.il_gallery {
   &_inner {
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +6,7 @@
   &-item {
     display: flex;
     height: 100%;
-    &[data-fancybox="gallery"] {
+    &[data-fancybox="il_gallery"] {
       cursor: pointer;
     }
     img {

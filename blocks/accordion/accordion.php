@@ -2,18 +2,14 @@
 
 if ( have_rows('accordion') ) :
 
-
-	$bg_color = get_field('background_color');
-	$bg_img = get_field('background_image');
-
 	$margin = get_field_object('margin');
 	$padding = get_field_object('padding');
 
-	$anchor = 'accordionBlock';
+	$anchor = 'il_accordion';
 	if ( ! empty( $block['anchor'] ) ) {
 		$anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
 	}
-	$class = 'il_accordion';
+	$class = 'il_block il_accordion';
 	if ( ! empty( $block['className'] ) ) {
 		$class .= ' ' . $block['className'];
 	}
@@ -26,7 +22,8 @@ if ( have_rows('accordion') ) :
 	}
 
 ?>
-<div id="<?php echo $anchor; ?>"class="<?php echo $class ?>" style="background-image: url('<?php echo $bg_color; ?>'); background-color: <?php echo $bg_color; ?>">
+<div id="<?php echo $anchor; ?>"class="<?php echo $class ?>">
+<?php get_template_part('components/background'); ?>
 	<div class="il_accordion_inner container">
 	<?php get_template_part('components/intro');
 

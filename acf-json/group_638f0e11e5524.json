@@ -68,7 +68,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
+            "layout": "row",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -135,6 +135,44 @@
             "endpoint": 0
         },
         {
+            "key": "field_638f3110b8241",
+            "label": "Tab Title",
+            "name": "tab_title",
+            "type": "true_false",
+            "instructions": "Show Tab Title inside the tab content box.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide",
+            "ui": 1
+        },
+        {
+            "key": "field_638f31e3a21fe",
+            "label": "Stack Tab Triggers on mobile",
+            "name": "stack_tabs",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
             "key": "field_638f0e1208f34",
             "label": "Background",
             "name": "background",
@@ -192,44 +230,6 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
-        },
-        {
-            "key": "field_638f3110b8241",
-            "label": "Tab Title",
-            "name": "tab_title",
-            "type": "true_false",
-            "instructions": "Show Tab Title inside the tab content box.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "Show",
-            "ui_off_text": "Hide",
-            "ui": 1
-        },
-        {
-            "key": "field_638f31e3a21fe",
-            "label": "Stack Tab Triggers on mobile",
-            "name": "stack_tabs",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
         }
     ],
     "location": [
@@ -250,5 +250,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670328847
+    "modified": 1670331074
 }

@@ -1,6 +1,6 @@
 // File location: assets\src\sass\styles
 .header-main {
-  z-index: 2;
+  z-index: 9;
 }
 @include desk-min {
   .menu-toggle {
@@ -30,7 +30,7 @@
       background-color: var(--color-2);
       padding: 1rem 2.5rem;
       color: #fff;
-      z-index: 2;
+      z-index: 9;
       div {
         width: 100%;
         text-align: center;

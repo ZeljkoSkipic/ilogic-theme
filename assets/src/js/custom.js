@@ -9,16 +9,16 @@ jQuery(document).ready(function ($) {
 		$( this ).parent('.il_accordion-item ').toggleClass('open')
 	});
 	// Tabs
-	$('.tabs_nav li:first-child').addClass('active');
-	$('.tabs_nav a').click(function() {
+	$('.il_tabs_nav li:first-child').addClass('active');
+	$('.il_tabs_nav a').click(function() {
 
 		// Check for active
-		$('.tabs_nav li').removeClass('active');
+		$('.il_tabs_nav li').removeClass('active');
 		$(this).parent().addClass('active');
 
 		// Display active tab
 		let currentTab = $(this).attr('href');
-		$('.tabs_content .tab').hide();
+		$('.il_tabs_content .il_tab').hide();
 		$(currentTab).show();
 
 		return false;

@@ -38,6 +38,31 @@ div {
   }
 }
 
+.il_block {
+  position: relative;
+  z-index: 2;
+}
+.il_block_bg {
+  z-index: -1;
+  @include ab-bg;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+  .desk_bg {
+    @include tab-max {
+      display: none;
+    }
+  }
+  .mob_bg {
+    @include limbo-min {
+      display: none;
+    }
+  }
+}
+
 /* Buttons */
 
 .il_btn {

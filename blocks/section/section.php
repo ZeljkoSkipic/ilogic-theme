@@ -1,6 +1,4 @@
 <?php
-$bg_color = get_field('background_color');
-$bg_img = get_field('background_image');
 $style = get_field_object('choose_style');
 $layout = get_field_object('layout');
 $stack = get_field_object('stack');
@@ -8,7 +6,7 @@ $stack = get_field_object('stack');
 $margin = get_field_object('margin');
 $padding = get_field_object('padding');
 
-$class = 'section';
+$class = 'il_block il_section';
 if ( ! empty( $block['className'] ) ) {
     $class .= ' ' . $block['className'];
 }
@@ -23,7 +21,7 @@ if ( ! empty( $padding) ) {
     $class .=  ' ' . $padding['value'];
 }
 
-$sec_in_class = 'section_inner container';
+$sec_in_class = 'il_section_inner container';
 if ( ! empty( $layout ) ) {
     $sec_in_class .=  ' ' . $layout['value'];
 }
@@ -35,7 +33,8 @@ if ( ! empty( $stack ) ) {
 ?>
 
 
-<div class="<?php echo $class ?>" style="background-image: url('<?php echo $bg_color; ?>'); background-color: <?php echo $bg_color; ?>">
+<div class="<?php echo $class; ?>">
+<?php get_template_part('components/background'); ?>
 <div class="<?php echo $sec_in_class ?>">
 <?php if( have_rows('info_box') ): ?>
 <?php while( have_rows('info_box') ): the_row();
@@ -46,8 +45,8 @@ if ( ! empty( $stack ) ) {
 	?>
 
 	<div class="left">
-		<<?php echo esc_html($tag); ?> class="section_title" style="color: <?php echo $title_color; ?>;"><?php echo $title; ?></<?php echo esc_html($tag); ?>>
-		<div class="section_text"><?php echo $text ?></div>
+		<<?php echo esc_html($tag); ?> class="il_section_title" style="color: <?php echo $title_color; ?>;"><?php echo $title; ?></<?php echo esc_html($tag); ?>>
+		<div class="il_section_text"><?php echo $text ?></div>
 		<?php get_template_part('components/buttons'); ?>
 	</div>
 

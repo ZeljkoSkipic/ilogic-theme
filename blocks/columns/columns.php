@@ -2,8 +2,6 @@
 $cols = get_field_object('columns');
 $tab_cols = get_field_object('tab_columns');
 $mob_cols = get_field_object('mob_columns');
-$bg_color = get_field('background_color');
-$bg_img = get_field('background_image');
 $team_layout = get_field_object('layout');
 
 $margin = get_field_object('margin');
@@ -15,7 +13,7 @@ if ( ! empty( $block['anchor'] ) ) {
     $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
 }
 
-$class = 'il_columns';
+$class = 'il_block il_columns';
 if ( ! empty( $block['className'] ) ) {
     $class .= ' ' . $block['className'];
 }
@@ -40,7 +38,8 @@ if ( ! empty( $padding) ) {
 
 ?>
 
-<div <?php echo $anchor; ?> class="<?php echo $class ?>"  style="background-image: url('<?php echo $bg_img; ?>'); background-color: <?php echo $bg_color; ?>">
+<div <?php echo $anchor; ?> class="<?php echo $class ?>">
+<?php get_template_part('components/background'); ?>
 	<div class="container">
 		<?php get_template_part('components/intro'); ?>
         <div class="il_columns_inner">
