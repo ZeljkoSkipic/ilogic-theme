@@ -2,12 +2,6 @@
 
 
 div {
-  &.full-screen {
-    height: 100vh;
-    .hero_inner {
-      justify-content: center;
-    }
-  }
   &.padding-sm {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -50,11 +44,6 @@ div {
     height: 100%;
     object-fit: cover;
     position: absolute;
-  }
-  .desk_bg {
-    @include tab-max {
-      display: none;
-    }
   }
   .mob_bg {
     @include limbo-min {

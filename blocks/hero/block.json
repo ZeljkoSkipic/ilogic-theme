@@ -2,7 +2,7 @@
     "name": "acf/hero",
     "title": "iLogic Hero CTA",
     "description": "A Hero CTA Block containing the Title, Subtitle, Content and Buttons. Used for the Homepage Hero Section",
-    "category": "formatting",
+    "category": "ilogic-category",
     "icon": "image-rotate-right",
     "keywords": ["hero", "ilogic"],
     "acf": {

@@ -149,3 +149,20 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/columns' );
 	register_block_type( __DIR__ . '/blocks/tabs' );
 }
+
+
+function filter_block_categories_when_post_provided( $block_categories, $editor_context ) {
+    if ( ! empty( $editor_context->post ) ) {
+        array_push(
+            $block_categories,
+            array(
+                'slug'  => 'ilogic-category',
+                'title' => __( 'iLogic Blocks', 'ilogic' ),
+                'icon'  => null,
+            )
+        );
+    }
+    return $block_categories;
+}
+
+add_filter( 'block_categories_all', 'filter_block_categories_when_post_provided', 10, 2 );

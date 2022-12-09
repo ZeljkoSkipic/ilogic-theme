@@ -2,7 +2,7 @@
     "name": "acf/section",
     "title": "iLogic Section",
     "description": "A Section Block containing the Info Box and the Image",
-    "category": "formatting",
+    "category": "ilogic-category",
     "icon": "welcome-widgets-menus",
     "keywords": ["section", "ilogic"],
     "acf": {

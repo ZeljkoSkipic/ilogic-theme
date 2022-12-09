@@ -2,8 +2,8 @@
     "name": "acf/accordion",
     "title": "iLogic Accordion",
     "description": "A Accordion Block",
-    "category": "formatting",
-    "icon": "welcome-widgets-menus",
+    "category": "ilogic-category",
+    "icon": "editor-kitchensink",
     "keywords": ["accordion", "ilogic"],
     "acf": {
         "mode": "auto",

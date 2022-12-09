@@ -2,7 +2,7 @@
     "name": "acf/tabs",
     "title": "iLogic Tabs",
     "description": "Tabbed content with simple text areas",
-    "category": "formatting",
+    "category": "ilogic-category",
     "icon": "table-row-after",
     "keywords": ["tabs", "ilogic"],
     "acf": {

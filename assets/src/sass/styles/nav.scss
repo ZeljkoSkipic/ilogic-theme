@@ -31,6 +31,11 @@
       padding: 1rem 2.5rem;
       color: #fff;
       z-index: 9;
+      .il_btn {
+        line-height: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
       div {
         width: 100%;
         text-align: center;
@@ -72,6 +77,15 @@
         .logo-wrap {
           flex: 15% 0 0;
           line-height: 0;
+          height: 7.5rem;
+          a {
+            height: 100%;
+            img {
+              height: 100%;
+              object-fit: contain;
+              object-position: left;
+            }
+          }
         }
         .nav-button {
           flex-shrink: 0;

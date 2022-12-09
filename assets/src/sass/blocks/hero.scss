@@ -1,5 +1,6 @@
 .il_hero {
   background-size: cover;
+  display: flex;
   .il_hero_inner {
     display: flex;
     flex-direction: column;
@@ -26,5 +27,15 @@
     text-decoration: none;
     border-radius: 3rem 0 3rem 3rem;
     border: none;
+  }
+  &.full-screen {
+    min-height: calc(100vh - 16.5rem); // With top bar
+    /* min-height: calc(100vh - 10.5rem); */ // Without top bar
+    @include limbo-max {
+      min-height: calc(100vh - 13rem);
+    }
+    .hero_inner {
+      justify-content: center;
+    }
   }
 }

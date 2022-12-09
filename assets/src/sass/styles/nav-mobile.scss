@@ -9,14 +9,24 @@
         position: sticky;
         top: 0;
         background-color: #fff;
+        height: 13rem;
     }
     .header-main-inner {
         display: flex;
         justify-content: space-between;
+        height: 100%;
     }
     .logo-wrap {
         line-height: 0;
         padding: 1rem 0;
+        a {
+            height: 100%;
+            img {
+                height: 100%;
+                object-fit: contain;
+                object-position: left;
+            }
+        }
     }
     .main-navigation {
         ul {

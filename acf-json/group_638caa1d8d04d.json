@@ -3,13 +3,42 @@
     "title": "Page: Inner Hero",
     "fields": [
         {
+            "key": "field_639317ea0dc4e",
+            "label": "Disable Hero",
+            "name": "disable_hero",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
             "key": "field_638caa1d42067",
             "label": "TItle",
             "name": "inner_hero_title",
+            "aria-label": "",
             "type": "text",
             "instructions": "If empty, the page title will be shown.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639317ea0dc4e",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -25,10 +54,19 @@
             "key": "field_638caa2e42068",
             "label": "Subtitle",
             "name": "inner_hero_subtitle",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639317ea0dc4e",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -64,5 +102,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670236735
+    "modified": 1670584367
 }

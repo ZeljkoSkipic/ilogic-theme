@@ -24,12 +24,6 @@
   }
 }
 
-div.full-screen {
-  height: 100vh;
-}
-div.full-screen .hero_inner {
-  justify-content: center;
-}
 div.padding-sm {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -78,11 +72,6 @@ div.margin-xl {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
-}
-@media (max-width: 797.5px) {
-  .il_block_bg .desk_bg {
-    display: none;
-  }
 }
 @media (min-width: 797.6px) {
   .il_block_bg .mob_bg {
@@ -160,7 +149,7 @@ div.margin-xl {
 html {
   font-size: 10px;
 }
-@media (min-width: 1360.6px) and (max-width: 1599.5px) {
+@media (min-width: 1360.6px) and (max-width: 1659.5px) {
   html {
     font-size: 8px;
   }
@@ -385,14 +374,26 @@ figure img {
     position: sticky;
     top: 0;
     background-color: #fff;
+    height: 13rem;
   }
   .header-main-inner {
     display: flex;
     justify-content: space-between;
+    height: 100%;
   }
   .logo-wrap {
     line-height: 0;
     padding: 1rem 0;
+  }
+  .logo-wrap a {
+    height: 100%;
+  }
+  .logo-wrap a img {
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: left;
+       object-position: left;
   }
   .main-navigation ul {
     display: none;
@@ -493,6 +494,11 @@ figure img {
     color: #fff;
     z-index: 9;
   }
+  .header-version-1 .header-top .il_btn {
+    line-height: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   .header-version-1 .header-top div {
     width: 100%;
     text-align: center;
@@ -529,6 +535,17 @@ figure img {
   .header-version-1 .header-main-inner .logo-wrap {
     flex: 15% 0 0;
     line-height: 0;
+    height: 7.5rem;
+  }
+  .header-version-1 .header-main-inner .logo-wrap a {
+    height: 100%;
+  }
+  .header-version-1 .header-main-inner .logo-wrap a img {
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: left;
+       object-position: left;
   }
   .header-version-1 .header-main-inner .nav-button {
     flex-shrink: 0;
@@ -2355,6 +2372,7 @@ textarea {
 
 .il_hero {
   background-size: cover;
+  display: flex;
 }
 .il_hero .il_hero_inner {
   display: flex;
@@ -2382,6 +2400,18 @@ textarea {
   text-decoration: none;
   border-radius: 3rem 0 3rem 3rem;
   border: none;
+}
+.il_hero.full-screen {
+  min-height: calc(100vh - 16.5rem);
+  /* min-height: calc(100vh - 10.5rem); */
+}
+@media (max-width: 1199.5px) {
+  .il_hero.full-screen {
+    min-height: calc(100vh - 13rem);
+  }
+}
+.il_hero.full-screen .hero_inner {
+  justify-content: center;
 }
 
 .il_section.style-1 {

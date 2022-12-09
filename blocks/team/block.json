@@ -2,8 +2,8 @@
     "name": "acf/team",
     "title": "iLogic Team",
     "description": "A Team Block",
-    "category": "formatting",
-    "icon": "welcome-widgets-menus",
+    "category": "ilogic-category",
+    "icon": "id",
     "keywords": ["team", "ilogic"],
     "acf": {
         "mode": "auto",
