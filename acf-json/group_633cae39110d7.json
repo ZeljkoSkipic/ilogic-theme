@@ -6,6 +6,7 @@
             "key": "field_63447fe3871ab",
             "label": "Title Tag",
             "name": "heading_tag",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -35,6 +36,7 @@
             "key": "field_634566dfeea72",
             "label": "Use Custom Color",
             "name": "use_custom_color",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -54,6 +56,7 @@
             "key": "field_6346ffc1d536b",
             "label": "Title Style",
             "name": "title_style",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -66,10 +69,7 @@
             "choices": {
                 "title-style-1": "Style 1",
                 "title-style-2": "Style 2",
-                "title-style-3": "Style 3",
-                "title-style-4": "Style 4",
-                "title-style-5": "Style 5",
-                "title-style-6": "Style 6"
+                "title-style-3": "Style 3"
             },
             "default_value": false,
             "return_format": "value",
@@ -83,6 +83,7 @@
             "key": "field_634566faeea73",
             "label": "Title Color",
             "name": "title_color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
@@ -108,6 +109,7 @@
             "key": "field_633cae4546452",
             "label": "Title",
             "name": "title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -142,5 +144,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669891167
+    "modified": 1674037345
 }

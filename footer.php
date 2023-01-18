@@ -9,23 +9,58 @@
  * @package ilogic
  */
 
+$class = 'footer_main_inner container';
+$cols = get_field_object('columns', 'option');
+$tab_cols = get_field_object('tab_columns', 'option');
+$mob_cols = get_field_object('mob_columns', 'option');
+$padding = get_field_object('padding', 'option');
+
+if ( ! empty( $cols ) ) {
+    $class .=  ' ' . $cols['value'];
+}
+if ( ! empty( $tab_cols ) ) {
+    $class .=  ' ' . $tab_cols['value'];
+}
+if ( ! empty( $mob_cols ) ) {
+    $class .=  ' ' . $mob_cols['value'];
+}
+if ( ! empty( $padding) ) {
+    $class .=  ' ' . $padding['value'];
+}
+
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ilogic' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ilogic' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ilogic' ), 'ilogic', '<a href="https://lemon-mss.com/">Lemon MSS</a> & <a href="https://zeljkoskipic.dev">Zeljko Skipic</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer id="footer" class="site_footer">
+		<div class="footer_main">
+		<div class="<?php echo $class; ?>">
+			<?php if ( is_active_sidebar( 'footer-1' ) ) { ?>
+				<div class="footer_col_1 column">
+					<?php dynamic_sidebar('footer-1'); ?>
+				</div>
+			<?php } ?>
+			<?php if ( is_active_sidebar( 'footer-2' ) ) { ?>
+				<div class="footer_col_2 column">
+					<?php dynamic_sidebar('footer-2'); ?>
+				</div>
+			<?php } ?>
+			<?php if ( is_active_sidebar( 'footer-3' ) ) { ?>
+				<div class="footer_col_3 column">
+					<?php dynamic_sidebar('footer-3'); ?>
+				</div>
+			<?php } ?>
+			<?php if ( is_active_sidebar( 'footer-4' ) ) { ?>
+				<div class="footer_col_4 column">
+					<?php dynamic_sidebar('footer-4'); ?>
+				</div>
+			<?php } ?>
+		</div>
+		</div>
+		<div class="footer_bottom">
+			<?php if ( is_active_sidebar( 'footer-bottom' ) ) { ?>
+				<?php dynamic_sidebar('footer-bottom'); ?>
+			<?php } ?>
+		</div>
+	</footer><!-- #footer -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

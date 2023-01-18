@@ -30,7 +30,15 @@ html {
     line-height: var(--title-line-height);
   }
 }
+main {
+  max-width: 2560px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .site-main, .interface-interface-skeleton__content {
+  p {
+    margin-top: 0;
+  }
   p, a {
     font-size: 2rem;
     @include limbo-max {

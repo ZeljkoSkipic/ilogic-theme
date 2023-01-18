@@ -6,6 +6,7 @@
             "key": "field_6346f6d37f098",
             "label": "Title",
             "name": "title",
+            "aria-label": "",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -24,9 +25,61 @@
             "prefix_name": 0
         },
         {
+            "key": "field_63c7cb8e8cc91",
+            "label": "Intro Alignment",
+            "name": "intro_alignment",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
+            "default_value": "left",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_63c7c882cbc4d",
+            "label": "Intro Text Color",
+            "name": "intro_text_color",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "style-1": "Theme Color",
+                "style-2": "White"
+            },
+            "default_value": "style-1",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_6346f7017f099",
             "label": "Intro Text",
             "name": "intro_text",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -61,5 +114,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669631922
+    "modified": 1674038331
 }

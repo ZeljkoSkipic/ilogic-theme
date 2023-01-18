@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '0.0.3' );
+	define( '_S_VERSION', '0.1' );
 }
 
 /**
@@ -107,9 +107,14 @@ add_action( 'widgets_init', 'ilogic_widgets_init' );
  */
 function ilogic_scripts() {
 	wp_enqueue_style( 'ilogic-style', get_stylesheet_uri(), array(), _S_VERSION );
+
 	wp_enqueue_style( 'frontend-style', get_template_directory_uri() . '/assets/public/css/frontend.css', array(), _S_VERSION );
 	wp_enqueue_script( 'ilogic-script', get_template_directory_uri() . '/assets/public/js/frontend.js', array('jquery'), _S_VERSION );
+
 	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/assets/public/js/vendor/fancybox.js',array('jquery'),_S_VERSION,true);
+	wp_enqueue_script( 'flickity', get_template_directory_uri() . '/assets/public/js/vendor/flickity.js',array('jquery'),_S_VERSION,true);
+	wp_enqueue_script( 'hash', get_template_directory_uri() . '/assets/public/js/vendor/hash.js',array('jquery'),_S_VERSION,true);
+
 }
 add_action( 'wp_enqueue_scripts', 'ilogic_scripts' );
 
@@ -149,6 +154,8 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/team' );
 	register_block_type( __DIR__ . '/blocks/columns' );
 	register_block_type( __DIR__ . '/blocks/tabs' );
+	register_block_type( __DIR__ . '/blocks/lb-carousel' );
+	register_block_type( __DIR__ . '/blocks/timeline' );
 }
 
 

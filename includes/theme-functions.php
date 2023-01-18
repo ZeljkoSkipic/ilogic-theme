@@ -117,3 +117,56 @@ function my_acf_json_load_point( $paths ) {
     return $paths;
 
 }
+
+
+// Register Footer Widgets
+
+
+function wpdocs_theme_slug_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Footer 1', 'ilogic' ),
+		'id'            => 'footer-1',
+		'description'   => __( 'Footer Area 1', 'ilogic' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+	) );
+    register_sidebar( array(
+		'name'          => __( 'Footer 2', 'ilogic' ),
+		'id'            => 'footer-2',
+		'description'   => __( 'Footer Area 2', 'ilogic' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+	) );
+    register_sidebar( array(
+		'name'          => __( 'Footer 3', 'ilogic' ),
+		'id'            => 'footer-3',
+		'description'   => __( 'Footer Area 3', 'ilogic' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+	) );
+    register_sidebar( array(
+		'name'          => __( 'Footer 4', 'ilogic' ),
+		'id'            => 'footer-4',
+		'description'   => __( 'Footer Area 4', 'ilogic' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+	) );
+    register_sidebar( array(
+		'name'          => __( 'Footer Bottom', 'ilogic' ),
+		'id'            => 'footer-bottom',
+		'description'   => __( 'Footer Bottom', 'ilogic' ),
+		'before_widget' => '<div class="footer_bottom_inner container">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'wpdocs_theme_slug_widgets_init' );

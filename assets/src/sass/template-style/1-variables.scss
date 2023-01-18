@@ -50,6 +50,7 @@ $sm-desk-max: 1360.5px;
 $md-desk-min: 1360.6px;
 $md-desk-max: 1659.5px;
 $lg-desk-min: 1659.6px;
+$huge-desk-min: 2560px;
 
 @mixin mob-only {
   @media (max-width: $mob-max) {
@@ -105,6 +106,12 @@ $lg-desk-min: 1659.6px;
   }
 }
 
+@mixin sm-desk-max {
+  @media (max-width: $sm-desk-max) {
+    @content;
+  }
+}
+
 @mixin md-desk-min {
   @media (min-width: $md-desk-min) {
     @content;
@@ -125,6 +132,12 @@ $lg-desk-min: 1659.6px;
 
 @mixin lg-desk-min {
   @media (min-width: $lg-desk-min) {
+    @content;
+  }
+}
+
+@mixin huge-desk-min {
+  @media (min-width: $huge-desk-min) {
     @content;
   }
 }

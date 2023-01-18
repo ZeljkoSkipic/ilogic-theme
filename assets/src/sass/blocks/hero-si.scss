@@ -13,6 +13,7 @@
       text-align: right;
       left: unset;
       z-index: 1;
+      transition: var(--theme-transition);
       video {
         position: relative;
       }
