@@ -156,6 +156,8 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/tabs' );
 	register_block_type( __DIR__ . '/blocks/lb-carousel' );
 	register_block_type( __DIR__ . '/blocks/timeline' );
+	register_block_type( __DIR__ . '/blocks/inner-hero-1' );
+	register_block_type( __DIR__ . '/blocks/inner-hero-2' );
 }
 
 

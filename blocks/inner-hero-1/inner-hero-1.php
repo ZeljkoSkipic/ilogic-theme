@@ -3,8 +3,13 @@
 $title = get_field('inner_hero_title');
 $subtitle = get_field('inner_hero_subtitle');
 
+$class = 'il_inner_hero-1 il_block';
+if ( ! empty( $block['className'] ) ) {
+    $class .= ' ' . $block['className'];
+}
+
 ?>
-<div class="il_inner_hero">
+<div class="<?php echo $class; ?>">
 <div class="il_inner_hero_bg">
 <?php
 
@@ -24,7 +29,6 @@ else {
 		<h1 class="il_inner_hero_title">
 		<?php if($title):
 			echo $title;
-
 		else:
 			the_title();
 

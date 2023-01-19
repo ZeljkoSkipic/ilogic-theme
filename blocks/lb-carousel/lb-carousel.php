@@ -1,4 +1,3 @@
-<?php ?>
 <?php
 $padding = get_field_object('padding');
 

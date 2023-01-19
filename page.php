@@ -16,9 +16,6 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<?php if( !get_field('disable_hero') ) { ?>
-			<?php get_template_part( 'template-parts/page/inner-hero' ); ?>
-		<?php } ?>
 		<?php
 		while ( have_posts() ) :
 			the_post();

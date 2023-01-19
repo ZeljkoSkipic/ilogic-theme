@@ -11,6 +11,7 @@ const WebpackBar           = require( 'webpackbar' ); // Display elegant progres
 const ImageMinimizerPlugin = require( 'image-minimizer-webpack-plugin' ); // To optimize (compress) all images using
 const CopyPlugin           = require( "copy-webpack-plugin" ); // For WordPress we need to copy images from src to public to optimize them
 
+
 module.exports = ( projectOptions ) => {
 
     /**
@@ -21,7 +22,12 @@ module.exports = ( projectOptions ) => {
         exclude: /(node_modules|bower_components|vendor)/,
         use:     [
             MiniCssExtractPlugin.loader, // Creates `style` nodes from JS strings
-            "css-loader",  // Translates CSS into CommonJS
+            {
+                loader: 'css-loader',
+                options: {
+                  esModule: true
+                }
+            },  // Translates CSS into CommonJS
             {  // loads the PostCSS loader
                 loader:  "postcss-loader",
                 options: require( projectOptions.projectCss.postCss )( projectOptions )
@@ -55,7 +61,10 @@ module.exports = ( projectOptions ) => {
         test: projectOptions.projectImages.rules.test,
         use:  [
             {
-                loader: 'file-loader',// Or `url-loader` or your other loader
+                loader: 'file-loader', // Or `url-loader` or your other loader
+                options: {
+                    esModule: true
+                }
             },
         ],
     }

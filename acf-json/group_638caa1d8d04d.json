@@ -1,13 +1,13 @@
 {
     "key": "group_638caa1d8d04d",
-    "title": "Page: Inner Hero",
+    "title": "Block: Inner Hero",
     "fields": [
         {
-            "key": "field_639317ea0dc4e",
-            "label": "Disable Hero",
-            "name": "disable_hero",
+            "key": "field_63c91299ccda2",
+            "label": "Content",
+            "name": "",
             "aria-label": "",
-            "type": "true_false",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,11 +16,8 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_638caa1d42067",
@@ -30,15 +27,7 @@
             "type": "text",
             "instructions": "If empty, the page title will be shown.",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_639317ea0dc4e",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -58,15 +47,7 @@
             "type": "textarea",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_639317ea0dc4e",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -77,19 +58,49 @@
             "rows": 4,
             "placeholder": "",
             "new_lines": "wpautop"
+        },
+        {
+            "key": "field_63c912acccda3",
+            "label": "Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63c912b4ccda4",
+            "label": "Background",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This block uses the Page Featured Image as a background.\r\nIf the featured image was not set, it will use the Default image set up in the:\r\n<a href=\"\/wp-admin\/admin.php?page=acf-options-misc\">Theme Settings > Misc<\/a>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "page"
-            },
-            {
-                "param": "page_type",
-                "operator": "!=",
-                "value": "front_page"
+                "value": "acf\/inner-hero-1"
             }
         ]
     ],
@@ -102,5 +113,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670584367
+    "modified": 1674126494
 }
