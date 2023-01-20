@@ -129,9 +129,7 @@ jQuery(document).ready(function ($) {
         cellAlign: 'left',
         contain: true,
         pageDots: false,
-        draggable: false,
-        hash: true,
-        initialIndex: 1
+        draggable: false
     });
 
     // Slider popup

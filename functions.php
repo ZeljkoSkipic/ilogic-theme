@@ -113,8 +113,6 @@ function ilogic_scripts() {
 
 	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/assets/public/js/vendor/fancybox.js',array('jquery'),_S_VERSION,true);
 	wp_enqueue_script( 'flickity', get_template_directory_uri() . '/assets/public/js/vendor/flickity.js',array('jquery'),_S_VERSION,true);
-	wp_enqueue_script( 'hash', get_template_directory_uri() . '/assets/public/js/vendor/hash.js',array('jquery'),_S_VERSION,true);
-
 }
 add_action( 'wp_enqueue_scripts', 'ilogic_scripts' );
 
