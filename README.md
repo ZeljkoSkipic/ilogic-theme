@@ -14,7 +14,7 @@ If you are using the Theme as is, run 'yarn prod' first to compile the files for
 
 Per Project:
 
-Adjust 'meta name="theme-color" content="--Site Primary Color--" in the header.php file.
+Adjust: *'meta name="theme-color" content="--Site Primary Color--"* in the header.php file.
 
 
                 (__)
