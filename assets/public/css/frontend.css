@@ -2513,7 +2513,7 @@ textarea {
 }
 .il_accordion-item .il_accordion-header::after {
   content: "";
-  background-image: url(d9782e07a8f0615dcd9d6d5356ffa938.svg);
+  background-image: url("../../icons/chevron-down.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 3rem;

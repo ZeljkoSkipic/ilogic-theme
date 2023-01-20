@@ -8,9 +8,6 @@ const magicImporter        = require( 'node-sass-magic-importer' ); // Add magic
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' ); // Extracts the CSS files into public/css
 const BrowserSyncPlugin    = require( 'browser-sync-webpack-plugin' ) // Synchronising URLs, interactions and code changes across devices
 const WebpackBar           = require( 'webpackbar' ); // Display elegant progress bar while building or watch
-const ImageMinimizerPlugin = require( 'image-minimizer-webpack-plugin' ); // To optimize (compress) all images using
-const CopyPlugin           = require( "copy-webpack-plugin" ); // For WordPress we need to copy images from src to public to optimize them
-
 
 module.exports = ( projectOptions ) => {
 
@@ -25,7 +22,8 @@ module.exports = ( projectOptions ) => {
             {
                 loader: 'css-loader',
                 options: {
-                  esModule: true
+                    sourceMap: true,
+                    url: false,
                 }
             },  // Translates CSS into CommonJS
             {  // loads the PostCSS loader
@@ -39,7 +37,7 @@ module.exports = ( projectOptions ) => {
         cssRules.use.push( { // Compiles Sass to CSS
             loader:  'sass-loader',
             options: {
-                sassOptions: { importer: magicImporter() }  // add magic import functionalities to sass
+               sassOptions: { importer: magicImporter() }  // add magic import functionalities to sass
             }
         } );
     }
@@ -58,15 +56,7 @@ module.exports = ( projectOptions ) => {
      * Images rules
      */
     const imageRules = {
-        test: projectOptions.projectImages.rules.test,
-        use:  [
-            {
-                loader: 'file-loader', // Or `url-loader` or your other loader
-                options: {
-                    esModule: true
-                }
-            },
-        ],
+
     }
 
     /**
@@ -84,12 +74,6 @@ module.exports = ( projectOptions ) => {
         ),
         new MiniCssExtractPlugin( { // Extracts CSS files
             filename: projectOptions.projectCss.filename
-        } ),
-        new CopyPlugin( { // Copies images from src to public
-            patterns: [ { from: projectOptions.projectImagesPath, to: projectOptions.projectOutput + '/images' }, ],
-        } ),
-        new ImageMinimizerPlugin( { // Optimizes images
-            minimizerOptions: projectOptions.projectImages.minimizerOptions,
         } ),
     ];
     // Add browserSync to plugins if enabled

@@ -19,15 +19,23 @@ jQuery(document).ready(function ($) {
   });
   // Tabs
   $('.il_tabs_nav li:first-child').addClass('active');
-  $('.il_tabs_nav a').click(function () {
+  $('.il_tabs_nav a').click(function (e) {
+    e.preventDefault();
     // Check for active
-    $('.il_tabs_nav li').removeClass('active');
+    var tabLabels = $(this.closest('.container')).find('.il_tabs_nav li');
+    tabLabels.removeClass('active');
     $(this).parent().addClass('active');
 
     // Display active tab
-    var currentTab = $(this).attr('href');
-    $('.il_tabs_content .il_tab').hide();
-    $(currentTab).show();
+    var currentTab = $(this).data('tab');
+    var currentsTabContent = $(this.closest('.container')).find('.il_tab');
+    currentsTabContent.hide();
+    $.each(currentsTabContent, function (key, tab) {
+      var tabContentIndex = $(tab).data('tab');
+      if (tabContentIndex === currentTab) {
+        $(tab).show();
+      }
+    });
     return false;
   });
 
@@ -116,7 +124,7 @@ jQuery(document).ready(function ($) {
 
   // Init Lightbox Carousel
 
-  $('.carousel-main').flickity({
+  var sliderCarousel = $('.carousel-main').flickity({
     // options
     cellAlign: 'left',
     contain: true,
@@ -125,12 +133,26 @@ jQuery(document).ready(function ($) {
     hash: true,
     initialIndex: 1
   });
-  $(".il_lb_triggers a").click(function () {
-    $(".il_lb_carousel_wrap").addClass('is-open');
-  });
-  $(".il_lb_carousel_wrap .close").click(function () {
-    $(".il_lb_carousel_wrap").removeClass('is-open');
-  });
+
+  // Slider popup
+
+  var trigger = $(".il_lb_triggers a");
+  var popup = $('.il_lb_carousel_wrap');
+  var close = $('.il_lb_carousel_wrap .close');
+  var openPopup = function openPopup(e) {
+    e.preventDefault();
+    var index = $(e.currentTarget).data('index');
+    sliderCarousel.flickity('select', index);
+    setTimeout(function () {
+      popup.addClass('is-open');
+    }, 200);
+  };
+  var closePopup = function closePopup(e) {
+    e.preventDefault();
+    popup.removeClass('is-open');
+  };
+  trigger.on('click', openPopup);
+  close.on('click', closePopup);
 });
 
 /***/ }),

@@ -40,7 +40,7 @@ if ( ! empty( $padding) ) {
 		<?php while( have_rows('tabs') ) : the_row();
 			$title = get_sub_field('tab_title');
 		?>
-			<li><a href="#tab<?php echo $item; ?>"><?php echo $title; ?></a></li>
+			<li><a data-tab = "<?php echo $item; ?>" href="#"><?php echo $title; ?></a></li>
 			<?php $item++;?>
 		<?php endwhile; ?>
 		</ul>
@@ -52,7 +52,7 @@ if ( ! empty( $padding) ) {
 				$content = get_sub_field('tab_content');
 
 				?>
-				<div class="il_tab" id="tab<?php echo $item; ?>">
+				<div data-tab="<?php echo $item; ?>" class="il_tab">
 				<?php if( get_field('tab_title') ) { ?>
 				<h3><?php echo $title; ?></h3>
 				<?php } ?>
