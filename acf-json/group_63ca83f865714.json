@@ -16,7 +16,7 @@
                 "class": "settings-logos",
                 "id": ""
             },
-            "message": "<br>\r\n<img width=\"250\" src=\"\/wp-content\/themes\/ilogic\/assets\/public\/images\/zeljko-skipic-logo.png\"> &ensp; and &ensp;<img width=\"250\" src=\"\/wp-content\/themes\/ilogic\/assets\/public\/images\/lemon-logo.png\">",
+            "message": "<br>\r\n<img width=\"250\" src=\"\/wp-content\/themes\/ilogic\/assets\/public\/images\/zeljko-skipic-logo.svg\"> &ensp; and &ensp;<img width=\"250\" src=\"\/wp-content\/themes\/ilogic\/assets\/public\/images\/lemon-logo.png\">",
             "new_lines": "br",
             "esc_html": 0
         }
@@ -39,5 +39,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674217066
+    "modified": 1674218442
 }
