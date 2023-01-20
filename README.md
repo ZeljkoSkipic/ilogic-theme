@@ -13,6 +13,7 @@ If you are using the Theme as is, run 'yarn prod' first to compile the files for
 **DEV Notes:**
 
 Per Project:
+
 Adjust 'meta name="theme-color" content="--Site Primary Color--" in the header.php file.
 
 
