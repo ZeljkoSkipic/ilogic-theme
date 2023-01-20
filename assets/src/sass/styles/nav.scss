@@ -40,6 +40,9 @@
         width: 100%;
         text-align: center;
       }
+      .section_inner {
+        display: flex;
+      }
       &.left {
         .section_inner {
           justify-content: left;
@@ -95,6 +98,17 @@
           text-transform: uppercase;
         }
       }
+    }
+  }
+}
+
+.admin-bar {
+  &.stick-top .header-version-1 .header-top, &.stick-main .header-version-1 .header-main {
+    top: 32px;
+  }
+  @media (max-width: 782px) {
+    &.stick-top .header-version-1 .header-top, &.stick-main .header-version-1 .header-main {
+      top: 46px;
     }
   }
 }

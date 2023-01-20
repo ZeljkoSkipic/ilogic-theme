@@ -528,6 +528,9 @@ figure img {
     width: 100%;
     text-align: center;
   }
+  .header-version-1 .header-top .section_inner {
+    display: flex;
+  }
   .header-version-1 .header-top.left .section_inner {
     justify-content: left;
   }
@@ -580,6 +583,15 @@ figure img {
     text-transform: uppercase;
   }
 }
+.admin-bar.stick-top .header-version-1 .header-top, .admin-bar.stick-main .header-version-1 .header-main {
+  top: 32px;
+}
+@media (max-width: 782px) {
+  .admin-bar.stick-top .header-version-1 .header-top, .admin-bar.stick-main .header-version-1 .header-main {
+    top: 46px;
+  }
+}
+
 .carousel {
   position: relative;
   box-sizing: border-box;

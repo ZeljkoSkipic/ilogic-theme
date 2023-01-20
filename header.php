@@ -18,6 +18,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php the_field('body_top_script', 'option') ?> <!-- Head(er) External Code -->
 	<?php wp_head(); ?>
+	<meta name="theme-color" content="#041B4F" />
 </head>
 
 <body <?php body_class(); ?>>

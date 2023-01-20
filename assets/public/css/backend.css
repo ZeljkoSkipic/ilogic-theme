@@ -2,6 +2,11 @@
 * Importing by glob example
 * https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer#globbing
  */
+.settings-logos .acf-input {
+  display: flex;
+  align-items: center;
+}
+
 :root {
   --color-1: #283565;
   --color-2: #40CECF;
