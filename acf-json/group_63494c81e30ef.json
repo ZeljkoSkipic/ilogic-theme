@@ -17,16 +17,16 @@
                 "id": ""
             },
             "choices": {
-                "block_space_1": "Large",
-                "block_space_2": "Small",
-                "block_space_3": "Huge",
-                "block_space_1_2": "Large\/Small",
-                "block_space_1_3": "Large\/Huge",
-                "block_space_3_1": "Huge\/Large",
-                "block_space_2_3": "Small\/Huge",
-                "block_space_3_2": "Huge\/Small"
+                "block_space_1": "Small",
+                "block_space_2": "Medium",
+                "block_space_3": "Large",
+                "block_space_1_2": "Small\/Medium",
+                "block_space_1_3": "Small\/Large",
+                "block_space_3_1": "Large\/Small",
+                "block_space_2_3": "Medium\/Large",
+                "block_space_3_2": "Large\/Medium"
             },
-            "default_value": "block_space_1",
+            "default_value": "block_space_2",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 1,
@@ -81,5 +81,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673443681
+    "modified": 1674469106
 }

@@ -56,7 +56,7 @@
         &::before {
             @include ab-bg;
             content: "";
-            background: linear-gradient(to right, #fff 1%, rgba(255,255,255, 0.5) 15%, transparent 30%);
+            background: linear-gradient(to right, #fff 5%, rgba(255,255,255, 0.5) 15%, transparent 30%);
         }
        }
         img {

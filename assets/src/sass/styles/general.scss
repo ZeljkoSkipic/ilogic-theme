@@ -36,8 +36,9 @@ main {
   margin-right: auto;
 }
 .site-main, .interface-interface-skeleton__content {
-  p {
+  p, li {
     margin-top: 0;
+    font-size: var(--body-size);
   }
   p, a {
     font-size: 2rem;

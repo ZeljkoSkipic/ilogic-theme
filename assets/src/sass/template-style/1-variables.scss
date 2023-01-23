@@ -15,18 +15,20 @@
 
   --title-line-height: 1.2;
 
-  --b-space-1: 14.7rem;
-  --b-space-2: 12rem;
-  --b-space-3: 23rem;
+  --b-space-1: 10rem;
+  --b-space-2: 12.5rem;
+  --b-space-3: 15rem;
 
   --theme-transition: .3s all;
 
   @media (min-width: 797.6px) /* Insert the same width as limbo-min variable */ {
     --site-width: 90%;
+    --body-size: 18px;
   }
 
   @media (max-width: 797.5px) /* Insert the same width as tab-max variable */ {
     --site-width: calc(100% - 50px);
+    --body-size: 16px;
   }
   --site-max-width: 1600px;
 }
