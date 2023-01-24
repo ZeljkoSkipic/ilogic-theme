@@ -36,6 +36,9 @@ main {
   margin-right: auto;
 }
 .site-main, .interface-interface-skeleton__content {
+  div, p, a {
+      font-family: Montserrat;
+  }
   p, li {
     margin-top: 0;
     font-size: var(--body-size);

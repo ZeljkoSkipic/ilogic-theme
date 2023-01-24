@@ -74,17 +74,17 @@
     opacity: 0;
     pointer-events: none;
     transition: var(--theme-transition);
+    .carousel-main {
+        top: 0;
+        position: fixed;
+        width: 100%;
+        .flickity-viewport {
+            height: 100vh !important;
+        }
+    }
     &.is-open {
         opacity: 1;
         pointer-events: all;
-        .carousel-main {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            .flickity-viewport {
-                height: 100vh !important;
-            }
-        }
     }
     .flickity-button, .close {
         border-radius: 0;

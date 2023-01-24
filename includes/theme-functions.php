@@ -86,6 +86,86 @@ function ilogic_register_required_plugins() {
 }
 
 
+
+// Custom login page
+
+add_filter( 'login_headerurl', 'my_custom_login_url' );
+function my_custom_login_url($url) {
+    return 'https://lemon-mss.com/';
+}
+
+function theme_login_screen() { ?>
+    <style type="text/css">
+		body.login {
+			background: #47d6ca;
+		}
+		div#login {
+			width: 500px;
+			max-width: 90%;
+		}
+		.login form#loginform {
+			box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 30%);
+			border: none;
+			border-radius: 20px;
+			padding: 3rem 2rem;
+		}
+		.login form#loginform label {
+			width: 100%;
+			text-align: center;
+		}
+		.login form#loginform p.forgetmenot label {
+			width: unset;
+		}
+		.login form input.input {
+			background: #f6f6f6;
+			padding: 1rem 2rem;
+			text-align: center;
+			border-color: transparent;
+			transition: .5s all;
+			outline: none;
+		}
+		.login form input.input:focus {
+			background: #fff;
+			border-bottom-color: #5fbae9;
+			box-shadow: none;
+		}
+        #login h1 a, .login h1 a {
+        background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/public/images/lemon-logo.png');
+        height:100px;
+        width:300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+		background-position: center;
+        padding-bottom: 10px;
+        }
+		.login form p.forgetmenot {
+			width: 100%;
+			text-align: center;
+		}
+		#login form p.submit {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+		.login .button-primary#wp-submit {
+			background: #5fbae9;
+			border: none;
+			text-transform: uppercase;
+			padding: .5rem 4rem;
+			margin-top: 2rem;
+			transition: .3s all;
+		}
+		.login .button-primary#wp-submit:hover {
+			background-color: #39ace7;
+		}
+		#login #nav, #login #backtoblog {
+			text-align: center;
+		}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'theme_login_screen' );
+
+
 // Disable Comments
 
 add_action('admin_init', function () {

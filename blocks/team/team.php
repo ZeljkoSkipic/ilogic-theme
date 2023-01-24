@@ -1,8 +1,5 @@
 <?php
 
-$bg_color = get_field('background_color');
-$bg_img = get_field('background_image');
-
 $margin = get_field_object('margin');
 $padding = get_field_object('padding');
 

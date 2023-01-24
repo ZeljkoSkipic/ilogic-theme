@@ -57,7 +57,7 @@ if ( ! empty( $padding) ) {
 						// Load sub field value.
 						$trigger_text = get_sub_field('trigger_text'); ?>
 						<div class="trigger-wrap">
-							<a class="si_trigger si-<?php echo $item; ?>"><span class="si_tt"><?php echo $trigger_text; ?></span><span class="si_ti"></span></a>
+							<a data-index="<?php echo $item; ?>" class="si_trigger si-<?php echo $item; ?>"><span class="si_tt"><?php echo $trigger_text; ?></span><span class="si_ti"></span></a>
 							<a class="close-trigger"></a>
 						</div>
 						<?php $item++;?>
@@ -75,8 +75,8 @@ if ( ! empty( $padding) ) {
 						<?php while( have_rows('hero_slide_in') ) : the_row();
 						$si_title = get_sub_field('si_title');
 						?>
-							<a class="mobile_trigger si_trigger si-<?php echo $item2; ?>"><span class="si_tt"><?php echo $si_title; ?></span><span class="si_ti"></span></a>
-						<div class="il_slidein block_space_1 si-<?php echo $item2; ?>">
+							<a data-index="<?php echo $item2;?>" class="mobile_trigger si_trigger si-<?php echo $item2; ?>"><span class="si_tt"><?php echo $si_title; ?></span><span class="si_ti"></span></a>
+						<div data-index="<?php echo $item2; ?>" class="il_slidein block_space_1 si-<?php echo $item2; ?>">
 						<?php $si_title = get_sub_field('si_title');
 						$si_content = get_sub_field('si_content');
 						$si_bg = get_sub_field('si_bg');
