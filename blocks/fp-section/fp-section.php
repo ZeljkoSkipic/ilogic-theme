@@ -43,7 +43,7 @@ if( have_rows('full_screen_section') ): ?>
         $class .=  ' ' . $alignment['value'];
     } ?>
 
-        <div class="<?php echo $class; ?>" data-anchor="<?php echo str_replace(' ', '', $title); ?>">
+        <div class="<?php echo $class; ?>" data-tooltip="<?php echo $title; ?>" data-anchor="<?php echo str_replace(' ', '', $title); ?>">
         <?php if($use_bg) { ?>
         <div class="il_block_bg" style="background-color: <?php echo $bg_color; ?>">
         <?php
@@ -81,13 +81,20 @@ if( have_rows('full_screen_section') ): ?>
 <?php endif;
 
 ?>
-<script>
-	new fullpage('#fullpage', {
 
+<script>
+    let sections = document.querySelectorAll('[data-tooltip]');
+    let tooltips = [];
+    if(sections.length > 0) {
+        sections.forEach((section) => {
+            let tooltip = section.dataset.tooltip;
+            if(tooltip) tooltips.push(tooltip);
+        });
+    }
+	new fullpage('#fullpage', {
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['firstSlide', 'secondSlide'],
-    showActiveTooltip: true,
-    ragAndMove: true,
-});
+    navigationTooltips: tooltips,
+    showActiveTooltip: true
+    });
 </script>

@@ -33,14 +33,7 @@
   --site-max-width: 1600px;
 }
 
-@mixin ab-bg {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
+// Breakpoint sizes - Associated with Breakpoints in Mixins.scss
 
 $mob-max: 479.5px;
 $tab-min: 479.6px;
@@ -53,93 +46,3 @@ $md-desk-min: 1360.6px;
 $md-desk-max: 1659.5px;
 $lg-desk-min: 1659.6px;
 $huge-desk-min: 2560px;
-
-@mixin mob-only {
-  @media (max-width: $mob-max) {
-    @content;
-  }
-}
-
-@mixin tab-min {
-  @media (min-width: $tab-min) {
-    @content;
-  }
-}
-
-@mixin tab-max {
-  @media (max-width: $tab-max) {
-    @content;
-  }
-}
-
-@mixin tab-only {
-  @media (min-width: $tab-min) and (max-width: $tab-max) {
-    @content;
-  }
-}
-
-@mixin limbo-min {
-  @media (min-width: $limbo-min) {
-    @content;
-  }
-}
-
-@mixin limbo-max {
-  @media (max-width: $limbo-max) {
-    @content;
-  }
-}
-
-@mixin limbo-only {
-  @media (min-width: $limbo-min) and (max-width: $limbo-max) {
-    @content;
-  }
-}
-
-@mixin desk-min {
-  @media (min-width: $desk-min) {
-    @content;
-  }
-}
-
-@mixin sm-desk-only {
-  @media (min-width: $desk-min) and (max-width: $sm-desk-max) {
-    @content;
-  }
-}
-
-@mixin sm-desk-max {
-  @media (max-width: $sm-desk-max) {
-    @content;
-  }
-}
-
-@mixin md-desk-min {
-  @media (min-width: $md-desk-min) {
-    @content;
-  }
-}
-
-@mixin md-desk-max {
-  @media (min-width: $md-desk-max) {
-    @content;
-  }
-}
-
-@mixin md-desk-only {
-  @media (min-width: $md-desk-min)  and (max-width: $md-desk-max) {
-    @content;
-  }
-}
-
-@mixin lg-desk-min {
-  @media (min-width: $lg-desk-min) {
-    @content;
-  }
-}
-
-@mixin huge-desk-min {
-  @media (min-width: $huge-desk-min) {
-    @content;
-  }
-}

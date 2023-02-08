@@ -3,7 +3,7 @@
 
 /* ACF Chrome bug Fix */
 
-.interface-interface-skeleton__content div.acf-field-tab {
+.interface-interface-skeleton__content div.acf-field-tab, .acf-settings-wrap div.acf-field-tab {
   display: block!important;
   font-size: 0;
   height: 0;
@@ -86,30 +86,8 @@ div {
   margin-bottom: 2rem;
 }
 
-/* Buttons */
-
-.il_btn {
-  padding: .5rem 4rem;
-  text-decoration: none;
-  color: #fff;
-  display: inline-flex;
-  font-size: 2rem;
-  &:first-child {
-    background-color: var(--color-1);
-  }
-  &:nth-child(2) {
-    background-color: var(--color-2);
-  }
-  &:nth-child(3) {
-    background-color: var(--color-3);
-  }
-  &:not(:last-child), &:not(:only-child) {
-    margin-right: 1rem;
-  }
-}
-
 @include mob-only {
-  .il_hm {
+  .il_hm { // Hides element on Mobile
     display: none;
   }
 }

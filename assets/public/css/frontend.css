@@ -30,7 +30,7 @@
 }
 
 /* ACF Chrome bug Fix */
-.interface-interface-skeleton__content div.acf-field-tab {
+.interface-interface-skeleton__content div.acf-field-tab, .acf-settings-wrap div.acf-field-tab {
   display: block !important;
   font-size: 0;
   height: 0;
@@ -38,7 +38,7 @@
   opacity: 0;
   pointer-events: none;
 }
-.interface-interface-skeleton__content div.acf-field-tab * {
+.interface-interface-skeleton__content div.acf-field-tab *, .acf-settings-wrap div.acf-field-tab * {
   pointer-events: none !important;
 }
 
@@ -115,27 +115,6 @@ div.margin-xl {
 
 .intro_title {
   margin-bottom: 2rem;
-}
-
-/* Buttons */
-.il_btn {
-  padding: 0.5rem 4rem;
-  text-decoration: none;
-  color: #fff;
-  display: inline-flex;
-  font-size: 2rem;
-}
-.il_btn:first-child {
-  background-color: var(--color-1);
-}
-.il_btn:nth-child(2) {
-  background-color: var(--color-2);
-}
-.il_btn:nth-child(3) {
-  background-color: var(--color-3);
-}
-.il_btn:not(:last-child), .il_btn:not(:only-child) {
-  margin-right: 1rem;
 }
 
 @media (max-width: 479.5px) {
@@ -2731,6 +2710,27 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+/* Buttons */
+.il_btn {
+  padding: 0.5rem 4rem;
+  text-decoration: none;
+  color: #fff;
+  display: inline-flex;
+  font-size: 2rem;
+}
+.il_btn:first-child {
+  background-color: var(--color-1);
+}
+.il_btn:nth-child(2) {
+  background-color: var(--color-2);
+}
+.il_btn:nth-child(3) {
+  background-color: var(--color-3);
+}
+.il_btn:not(:last-child), .il_btn:not(:only-child) {
+  margin-right: 1rem;
 }
 
 .il_block_intro.left, .section.left {
