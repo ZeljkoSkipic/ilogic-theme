@@ -1673,7 +1673,6 @@ html h6 {
   -webkit-margin-after: 0;
           margin-block-end: 0;
   line-height: var(--title-line-height);
-  /* font-family: Declare Title Font family here; */
 }
 
 main {
@@ -1682,10 +1681,11 @@ main {
   margin-right: auto;
 }
 
-.site-main, .interface-interface-skeleton__content {
-  /* div, p, a {
-      font-family: Declare Main Font family here;
-  } */
+.site-main h1, .site-main h2, .site-main h3, .site-main h4, .site-main h5, .site-main h6, .interface-interface-skeleton__content h1, .interface-interface-skeleton__content h2, .interface-interface-skeleton__content h3, .interface-interface-skeleton__content h4, .interface-interface-skeleton__content h5, .interface-interface-skeleton__content h6 {
+  font-family: "Font Primary";
+}
+.site-main div, .site-main p, .site-main a, .interface-interface-skeleton__content div, .interface-interface-skeleton__content p, .interface-interface-skeleton__content a {
+  font-family: "Font Secondary";
 }
 .site-main p, .site-main li, .interface-interface-skeleton__content p, .interface-interface-skeleton__content li {
   margin-top: 0;

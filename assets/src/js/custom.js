@@ -6,6 +6,15 @@ jQuery(document).ready(function ($) {
         $("#primary-menu").fadeToggle();
         $(this).toggleClass('menu-open')
     });
+    // Sub Menu Trigger
+
+    $( "#primary-menu li.menu-item-has-children > a" ).after('<span class="sub-menu-trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></span>');
+
+    $( ".sub-menu-trigger" ).click(function() {
+		$( this ).parent().toggleClass('sub-menu-open')
+		$( this ).siblings(".sub-menu").slideToggle();
+	});
+
     // Accordion
     $(".il_accordion-header").click(function () {
         $(this).siblings(".il_accordion-body").slideToggle();
@@ -75,60 +84,6 @@ jQuery(document).ready(function ($) {
     siTrigger.on('click', siSlide);
     siClose.on('click', siSlideDown);
 
-    // $(".si_close").click(function () {
-    //     $(".si_trigger, .il_hero_slidein").removeClass('si_open');
-    //     $(".il_slidein.si_open").slideToggle().removeClass('si_open');
-    // });
-
-
-    // $(".si_triggers .si_trigger").click(function () {
-    //     $(".il_hero_slidein:not(.si_open)").addClass('si_open');
-    // });
-
-    // $(".si_triggers .close-trigger").click(function () {
-    //     $(".il_hero_slidein").removeClass('si_open');
-    //     $(".si_trigger.si_open").removeClass('si_open');
-    //     $(".il_slidein.si_open").slideToggle().removeClass('si_open');
-    // });
-
-    // $(".si_trigger.si-1").click(function () {
-    //     $(".si_trigger.si-1").toggleClass('si_open');
-    //     $(".si_trigger:not(.si-1)").removeClass('si_open');
-    //     $(".il_slidein.si-1").slideToggle().toggleClass('si_open');
-    //     $(".il_slidein.si_open:not(.si-1)").slideToggle().removeClass('si_open');
-    // });
-    // $(".si_trigger.si-2").click(function () {
-    //     $(".si_trigger.si-2").toggleClass('si_open');
-    //     $(".si_trigger:not(.si-2)").removeClass('si_open');
-    //     $(".il_slidein.si-2").slideToggle().toggleClass('si_open');
-    //     $(".il_slidein.si_open:not(.si-2)").slideToggle().removeClass('si_open');
-    // });
-    // $(".si_trigger.si-3").click(function () {
-    //     $(".si_trigger.si-3").toggleClass('si_open');
-    //     $(".si_trigger:not(.si-3)").removeClass('si_open');
-    //     $(".il_slidein.si-3").slideToggle().toggleClass('si_open');
-    //     $(".il_slidein.si_open:not(.si-3)").slideToggle().removeClass('si_open');
-    // });
-    // $(".si_trigger.si-4").click(function () {
-    //     $(".si_trigger.si-4").toggleClass('si_open');
-    //     $(".si_trigger:not(.si-4)").removeClass('si_open');
-    //     $(".il_slidein.si-4").slideToggle().toggleClass('si_open');
-    //     $(".il_slidein.si_open:not(.si-4)").slideToggle().removeClass('si_open');
-    // });
-    // $(".si_trigger.si-5").click(function () {
-    //     $(".si_trigger.si-5").toggleClass('si_open');
-    //     $(".si_trigger:not(.si-5)").removeClass('si_open');
-    //     $(".il_slidein.si-5").slideToggle().toggleClass('si_open');
-    //     $(".il_slidein.si_open:not(.si-5)").slideToggle().removeClass('si_open');
-    // });
-
-    // Mobile
-
-    // $(".si_title").click(function () {
-    //     $(this).parents(".il_slidein").slideToggle().removeClass("si_open");
-    //     $(".mobile_trigger").removeClass("si_open");
-    // });
-
     // Technologies
 
     $(".tg_trigger-1").click(function () {
@@ -174,13 +129,6 @@ jQuery(document).ready(function ($) {
         hash: true,
         initialIndex: 1
     });
-
-    // $( ".il_lb_triggers a" ).click(function() {
-    // $( ".il_lb_carousel_wrap" ).addClass('is-open');
-
-    	// $( ".il_lb_carousel_wrap .close" ).click(function() {
-	// 	$( ".il_lb_carousel_wrap" ).removeClass('is-open');
-	// });
 
     // Slider popup
 

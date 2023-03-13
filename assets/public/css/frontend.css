@@ -445,7 +445,6 @@ html h6 {
   -webkit-margin-after: 0;
           margin-block-end: 0;
   line-height: var(--title-line-height);
-  /* font-family: Declare Title Font family here; */
 }
 
 main {
@@ -454,10 +453,11 @@ main {
   margin-right: auto;
 }
 
-.site-main, .interface-interface-skeleton__content {
-  /* div, p, a {
-      font-family: Declare Main Font family here;
-  } */
+.site-main h1, .site-main h2, .site-main h3, .site-main h4, .site-main h5, .site-main h6, .interface-interface-skeleton__content h1, .interface-interface-skeleton__content h2, .interface-interface-skeleton__content h3, .interface-interface-skeleton__content h4, .interface-interface-skeleton__content h5, .interface-interface-skeleton__content h6 {
+  font-family: "Font Primary";
+}
+.site-main div, .site-main p, .site-main a, .interface-interface-skeleton__content div, .interface-interface-skeleton__content p, .interface-interface-skeleton__content a {
+  font-family: "Font Secondary";
 }
 .site-main p, .site-main li, .interface-interface-skeleton__content p, .interface-interface-skeleton__content li {
   margin-top: 0;
@@ -648,12 +648,37 @@ figure img {
     color: var(--color-text);
     opacity: 0.65;
     font-size: 15px;
+    width: 100%;
   }
   #primary-menu li.current-menu-item a {
     opacity: 1;
   }
+  #primary-menu li.menu-item-has-children a {
+    width: calc(100% - 25px);
+  }
+  #primary-menu li .sub-menu-trigger {
+    width: 25px;
+    transform: rotate(45deg);
+    transition: var(--theme-transition);
+  }
+  #primary-menu li > .sub-menu {
+    width: 100%;
+    margin-left: 10px;
+  }
+  #primary-menu li > .sub-menu a {
+    padding: 1rem 1.5rem;
+  }
+  #primary-menu li.sub-menu-open .sub-menu-trigger {
+    transform: rotate(90deg);
+  }
+  #primary-menu > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
   .nav-button {
-    display: none;
+    display: none !important;
   }
   /* Nav Trigger Start */
   .menu-toggle {
@@ -766,12 +791,51 @@ figure img {
   }
   .header-version-1 .header-main-inner #primary-menu {
     justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .header-version-1 .header-main-inner #primary-menu ul.sub-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem;
+    opacity: 0;
+    transition: var(--theme-transition);
+  }
+  .header-version-1 .header-main-inner #primary-menu > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-version-1 .header-main-inner #primary-menu > li:not(:first-child) {
+    padding-left: 20px;
+  }
+  .header-version-1 .header-main-inner #primary-menu > li .sub-menu-trigger {
+    top: 3px;
+    position: relative;
+    right: 13px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: var(--theme-transition);
+  }
+  .header-version-1 .header-main-inner #primary-menu > li .sub-menu-trigger svg {
+    stroke: var(--color-1);
+  }
+  .header-version-1 .header-main-inner #primary-menu > li .sub-menu-trigger > .sub-menu {
+    font-size: 17px;
+  }
+  .header-version-1 .header-main-inner #primary-menu > li:hover .sub-menu-trigger {
+    transform: rotate(90deg);
+    top: 1px;
+    right: 17px;
+  }
+  .header-version-1 .header-main-inner #primary-menu > li:hover .sub-menu {
+    opacity: 1;
   }
   .header-version-1 .header-main-inner #primary-menu a {
     text-transform: uppercase;
     margin-right: 2rem;
     color: var(--color-text);
-    font-size: 2rem;
+    font-size: 16px;
   }
   .header-version-1 .header-main-inner .logo-wrap {
     flex: 15% 0 0;
@@ -794,6 +858,7 @@ figure img {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    background-color: var(--color-1);
   }
 }
 .admin-bar.stick-top .header-version-1 .header-top, .admin-bar.stick-main .header-version-1 .header-main {
@@ -2431,13 +2496,14 @@ textarea {
   padding-left: 0;
 }
 
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
+@media (min-width: 1199.6px) {
+  .main-navigation ul ul {
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: 99999;
+  }
 }
 
 .main-navigation ul ul ul {

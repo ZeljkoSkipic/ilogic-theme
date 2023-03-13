@@ -46,16 +46,45 @@
                 color: var(--color-text);
                 opacity: .65;
                 font-size: 15px;
+                width: 100%;
             }
             &.current-menu-item {
                 a {
                     opacity: 1;
                 }
             }
+            &.menu-item-has-children {
+                a {
+                    width: calc(100% - 25px);
+                }
+            }
+            .sub-menu-trigger {
+                width: 25px;
+                transform: rotate(45deg);
+                transition: var(--theme-transition);
+            }
+            > .sub-menu {
+                width: 100%;
+                margin-left: 10px;
+                a {
+                  padding: 1rem 1.5rem;
+                }
+              }
+              &.sub-menu-open {
+                .sub-menu-trigger {
+                  transform: rotate(90deg);
+                }
+              }
+        }
+        > li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
     }
     .nav-button {
-        display: none;
+        display: none!important;
     }
 
     /* Nav Trigger Start */

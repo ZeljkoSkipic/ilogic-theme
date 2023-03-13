@@ -63,8 +63,24 @@ function ilogic_register_required_plugins() {
 			'version'            => '6.0.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+		array(
+			'name'               => 'Custom Fonts', // The plugin name.
+			'slug'               => 'custom-fonts', // The plugin slug (typically the folder name).
+			'source'             => 'https://wordpress.org/plugins/custom-fonts/', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '1.3.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+		),
+		array(
+			'name'               => 'Safe SVG', // The plugin name.
+			'slug'               => 'safe-svg', // The plugin slug (typically the folder name).
+			'source'             => 'https://wordpress.org/plugins/safe-svg/', // The plugin source.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '2.0.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 		),
 
 	);
@@ -242,10 +258,13 @@ function my_acf_json_load_point( $paths ) {
 }
 
 
-// Register Footer Widgets
+// Register Widgets
+
+// @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
 
 
-function wpdocs_theme_slug_widgets_init() {
+
+function theme_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer 1', 'ilogic' ),
 		'id'            => 'footer-1',
@@ -292,4 +311,4 @@ function wpdocs_theme_slug_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'wpdocs_theme_slug_widgets_init' );
+add_action( 'widgets_init', 'theme_widgets_init' );

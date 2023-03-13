@@ -28,7 +28,6 @@ html {
     margin-block-start: 0;
     margin-block-end: 0;
     line-height: var(--title-line-height);
-    /* font-family: Declare Title Font family here; */
   }
 }
 main {
@@ -37,9 +36,12 @@ main {
   margin-right: auto;
 }
 .site-main, .interface-interface-skeleton__content {
-  /* div, p, a {
-      font-family: Declare Main Font family here;
-  } */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Font Primary',
+  }
+  div, p, a {
+      font-family: 'Font Secondary';
+  }
   p, li {
     margin-top: 0;
     font-size: var(--body-size);
