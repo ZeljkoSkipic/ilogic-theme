@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.3' );
+	define( '_S_VERSION', '1.0.6' );
 }
 
 /**
@@ -118,6 +118,12 @@ require get_template_directory() . '/includes/theme-options.php';
 // Fun Facts
 
 require get_template_directory() . '/includes/theme-facts.php';
+
+
+// Load scripts for block
+
+
+ require get_template_directory() . '/includes/blocks-js.php';
 
 
 // Register Blocks

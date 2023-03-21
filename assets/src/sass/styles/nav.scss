@@ -2,6 +2,11 @@
 .header-main {
   z-index: 9;
 }
+.sub-menu-trigger {
+  svg {
+    stroke: var(--color-1);
+  }
+}
 @include desk-min {
   .menu-toggle {
     display: none;
@@ -79,6 +84,11 @@
               padding: 2rem;
               opacity: 0;
               transition: var(--theme-transition);
+              li:not(:last-child) {
+                a {
+                  margin-bottom: .5rem;
+                }
+              }
             }
           }
           > li {
@@ -140,6 +150,7 @@
           text-decoration: none;
           text-transform: uppercase;
           background-color: var(--color-1);
+          z-index: 99999;
         }
       }
     }

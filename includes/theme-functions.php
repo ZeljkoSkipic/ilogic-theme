@@ -312,3 +312,19 @@ function theme_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'theme_widgets_init' );
+
+// Theme Colors
+
+add_action('acf/input/admin_head', 'admin_variables');
+function admin_variables() {
+    ?>
+    <style type="text/css">
+        :root {
+			--color-1: <?php the_field('primary_color', 'option'); ?>;
+			--color-2: <?php the_field('secondary_color', 'option'); ?>;
+			--color-3: <?php the_field('third_color', 'option'); ?>;
+			--color-text: <?php the_field('text_color', 'option'); ?>;
+		}
+    </style>
+    <?php
+}

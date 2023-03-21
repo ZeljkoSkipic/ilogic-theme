@@ -16,9 +16,17 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<?php the_field('body_top_script', 'option') ?> <!-- Head(er) External Code -->
+	<?php the_field('head_script', 'option') ?> <!-- Head(er) External Code -->
 	<?php wp_head(); ?>
-	<meta name="theme-color" content="#041B4F" />
+	<meta name="theme-color" content="<?php the_field('primary_color', 'option'); ?>" />
+	<style>
+		:root {
+			--color-1: <?php the_field('primary_color', 'option'); ?>;
+			--color-2: <?php the_field('secondary_color', 'option'); ?>;
+			--color-3: <?php the_field('third_color', 'option'); ?>;
+			--color-text: <?php the_field('text_color', 'option'); ?>;
+		}
+	</style>
 </head>
 
 <body <?php body_class(); ?>>
